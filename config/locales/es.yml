@@ -1,0 +1,4 @@
+es:
+  controllers:
+    sessions:
+      no_user_found: "Este usuario no existe"
