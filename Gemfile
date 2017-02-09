@@ -26,6 +26,9 @@ gem 'paperclip', '~> 5.0.0'
 # Pdf gem
 gem 'prawn'
 
+# controller scoping gem
+gem 'has_scope'
+
 gem 'rails-i18n', '~> 5.0.0'
 
 group :development, :test do
@@ -36,6 +39,7 @@ group :development, :test do
   gem 'faker'
   gem 'better_errors'
   gem 'rubocop'
+  gem 'database_cleaner'
 end
 
 group :development, :test do
