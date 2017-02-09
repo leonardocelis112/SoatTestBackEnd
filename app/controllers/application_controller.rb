@@ -26,4 +26,8 @@ class ApplicationController < ActionController::API
       render text: '', content_type: 'text/plain'
     end
   end
+
+  def options
+    render json: {}, status:200
+  end
 end

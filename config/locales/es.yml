@@ -2,6 +2,7 @@ es:
   controllers:
     sessions:
       no_user_found: "Este usuario no existe"
+      wrong_password: "Contraseña incorrecta"
     payments:
       payment_succces: "Tu pago ha sido aprovado"
       payment_error: "Tu pago ha sido rechazado"
