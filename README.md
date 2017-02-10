@@ -28,6 +28,8 @@ clone first and in each folder type:
 ## Run
     docker-compose up
 
+    type in your browser localhost:8000
+
 Note: If you make any changes to the individual projects, you MUST delete
 their previous running container and re run compose:
 
@@ -40,5 +42,5 @@ their previous running container and re run compose:
   clone the project and type bundle install
 
   rails s to serve
-  
+
   bundle exec rspec for testing
