@@ -1,0 +1,15 @@
+version: '2'
+services:
+  # Load balancer
+  soat-back:
+    container_name: soat-back
+    image: soat-back
+    network_mode: host
+    ports:
+    - '8080:8082'
+  soat-front:
+    image: soat-front
+    container_name: soat-front
+    network_mode: host
+    ports:
+      - '8000:8000'

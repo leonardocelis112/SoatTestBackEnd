@@ -1,24 +1,39 @@
-# README
+## Soat test backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Test project to be part of youse colombia team (BackEnd)
 
-Things you may want to cover:
+*Use Sqlite for development purposes*
+*Testing coverage 70%*
+*Database populated with seeds from the guidelines pdf*
 
-* Ruby version
 
-* System dependencies
+## Instalation
 
-* Configuration
+Install docker, and docker compose.
 
-* Database creation
+Create images for each of the individual projects, from their location:
 
-* Database initialization
+clone first and in each folder type:
 
-* How to run the test suite
+ - [soat-front](https://github.com/leonardocelis112/SoatTestFrontEnd)
 
-* Services (job queues, cache servers, search engines, etc.)
+        docker build -t soat-front .
 
-* Deployment instructions
+ - [soat-back](https://github.com/leonardocelis112/SoatTestBackEnd)
 
-* ...
+        docker build -t soat-back .
+
+## Run
+    docker-compose up
+
+Note: If you make any changes to the individual projects, you MUST delete
+their previous running container and re run compose:
+
+    docker-compose up --force-recreate
+
+## The Hard Way
+
+  Rails 5.0 installed
+  clone the project and type bundle install
+  rails s to serve
+  bundle exec rspec for testing
