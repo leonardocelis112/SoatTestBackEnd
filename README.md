@@ -3,7 +3,9 @@
 Test project to be part of youse colombia team (BackEnd)
 
 *Use Sqlite for development purposes*
+
 *Testing coverage 70%*
+
 *Database populated with seeds from the guidelines pdf*
 
 
@@ -34,6 +36,9 @@ their previous running container and re run compose:
 ## The Hard Way
 
   Rails 5.0 installed
+
   clone the project and type bundle install
+
   rails s to serve
+  
   bundle exec rspec for testing
