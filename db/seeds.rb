@@ -1,6 +1,7 @@
 # rubocop:disable all
 # Test user
 admin = User.create(first_name: 'Daniel', last_name: 'Masson', email: 'daniel.masson@cnpx.com.co', password: "123")
+admin.remove_role(:client)
 admin.add_role(:admin)
 
 # Soat Insurance coverage and conditions
