@@ -6,7 +6,7 @@ class SoatInsurancesController < ApplicationController
   has_scope :by_registration_plate
 
   def index
-    soat_insurances = @user.soat_insurances
+    soat_insurances = apply_scopes(@user.soat_insurances)
     render json: soat_insurances,
            each_serializer: SoatInsuranceSerializer, status: 200
   end
@@ -14,7 +14,6 @@ class SoatInsurancesController < ApplicationController
   def create
     soat_insurance = SoatInsurance.new(soat_insurance_params)
     if soat_insurance.save
-      @user.soat_insurances << soat_insurance
       render json: soat_insurance,
              serializer: SoatInsuranceSerializer, status: 201
     else
@@ -26,6 +25,7 @@ class SoatInsurancesController < ApplicationController
 
   def soat_insurance_params
     params.permit(
+      :user_id,
       :vehicle_class_id,
       :vehicle_subtype_id,
       :registration_plate,

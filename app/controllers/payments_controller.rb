@@ -5,6 +5,11 @@ class PaymentsController < ApplicationController
     render json: payments, status: 200
   end
 
+  def show
+    payment = Payment.find(params[:id])
+    render json: payment, status: 200
+  end
+
   def create
     manager = PaymentManager.new
     if manager.pay(payment_params)

@@ -26,6 +26,9 @@ gem 'paperclip', '~> 5.0.0'
 # Pdf gem
 gem 'prawn'
 
+# mailing gem
+gem 'mailgun-ruby', '~>1.1.2'
+
 # controller scoping gem
 gem 'has_scope'
 

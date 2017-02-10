@@ -9,6 +9,7 @@ class SoatInsurance < ApplicationRecord
   belongs_to :vehicle_class
   belongs_to :vehicle_subtype
   belongs_to :user
+  has_one :payment
 
   # Scopes
   scope :by_registration_plate, ->(plate) { where(registration_plate: plate) }
